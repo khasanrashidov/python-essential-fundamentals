@@ -1,0 +1,189 @@
+>>> p = 'python'
+>>> type(p)
+<class 'str'>
+>>> type(True)
+<class 'bool'>
+>>> int(1.99)
+1
+>>> a = 1.
+>>> a
+1.0
+>>> str(a)
+'1.0'
+>>> s = '100'
+>>> int(s)
+100
+>>> float(s)
+100.0
+>>> f = '1.'
+>>> float(f)
+1.0
+>>> int(f)
+Traceback (most recent call last):
+  File "<pyshell#12>", line 1, in <module>
+    int(f)
+ValueError: invalid literal for int() with base 10: '1.'
+>>> 
+==============================
+>>> 7//4
+1
+>>> 7%4
+3
+>>> 7/4
+1.75
+>>> abs(-5)
+5
+>>> round(1.75)
+2
+>>> round(1.5)
+2
+>>> round(0.5)
+0
+>>> round(1.85, 1)
+1.9
+>>> a = 0.99999999999
+>>> round(a, 4)
+1.0
+>>> 2.5%2
+0.5
+>>> 2.5//2
+1.0
+>>> -2.5%2
+1.5
+>>> -(2.5%2)
+-0.5
+==============================
+>>> x = 10
+>>> x == 10
+True
+>>> 10 < x < 100
+False
+>>> x - 1 < x < x + 1
+True
+>>> (x - 1) < x < (x + 1)
+True
+>>> x = 10
+>>> (1 < x) and (x < 100)
+True
+>>> 1 < x < 100
+True
+==============================
+>>> a = 1
+>>> b = 1.0
+>>> a == b
+True
+>>> a is b
+False
+>>> id(a)
+2595796353264
+>>> id(b)
+2595835918480
+>>> id(a) == id(b)
+False
+>>> a is not b
+True
+>>> id(a) != id(b)
+True
+==============================
+>>> c = 4
+>>> d = 4
+>>> c == d
+True
+>>> c is d
+True
+>>> id(c)
+2595796353360
+>>> id(d)
+2595796353360
+>>> id(c) == id(d)
+True
+==============================
+>>> type(type)
+<class 'type'>
+>>> type(None)
+<class 'NoneType'>
+==============================
+>>> a=15
+>>> b=42
+>>> c=a+b
+>>> c
+57
+==============================
+>>> ten=10
+>>> two=2
+>>> animal="dog"
+>>> two_str="2"
+>>> two==two_str
+False
+>>> int(two_str)
+2
+>>> two==int(two_str)
+True
+==============================
+>>> my_float=3.14159
+>>> my_int=int(my_float)
+>>> my_int
+3
+>>> my_string=str(my_float)
+>>> my_string
+'3.14159'
+==============================
+>>> a='my python'
+>>> b=3030
+>>> c=33.33
+>>> type(a)
+<class 'str'>
+>>> type(b)
+<class 'int'>
+>>> type(c)
+<class 'float'>
+==============================
+>>> a=2021
+>>> b=21.07
+>>> a=float(a)
+>>> b=int(b)
+>>> a
+2021.0
+>>> b
+21
+==============================
+## area of circle = pi * radius ** 2
+## circumference of circle = 2 * pi * radius
+>>> pi=3.14
+>>> radius = 5
+>>> area = pi * radius ** 2
+>>> area
+78.5
+>>> circum = 2 * pi * radius
+>>> circum
+31.400000000000002
+==============================
+>>> a=7
+>>> b=15
+>>> c=45
+>>> d=42
+>>> e=-54
+>>> f=-60
+>>> g=21
+>>> ## make all rs True
+>>> r1=a<b
+>>> r1
+True
+>>> r2=c>g
+>>> r2
+True
+>>> r3=d>0
+>>> r3
+True
+>>> r4=d<d+3
+>>> r4
+True
+>>> r5=e>f
+>>> r5
+True
+>>> r6=e==f+6
+>>> r6
+True
+>>> r1,r2,r3,r4,r5,r6
+(True, True, True, True, True, True)
+==============================

@@ -1,0 +1,88 @@
+help('modules')
+
+Please wait a moment while I gather a list of all available modules...
+
+
+Warning (from warnings module):
+  File "C:\Users\A\AppData\Local\Programs\Python\Python310\lib\site-packages\_distutils_hack\__init__.py", line 33
+    warnings.warn("Setuptools is replacing distutils.")
+UserWarning: Setuptools is replacing distutils.
+__future__          _threading_local    gettext             sched
+_abc                _tkinter            glob                secrets
+_aix_support        _tracemalloc        graphlib            select
+_ast                _uuid               gzip                selectors
+_asyncio            _warnings           hashlib             setuptools
+_bisect             _weakref            heapq               shelve
+_blake2             _weakrefset         hmac                shlex
+_bootsubprocess     _winapi             html                shutil
+_bz2                _xxsubinterpreters  http                signal
+_codecs             _zoneinfo           idlelib             site
+_codecs_cn          abc                 imaplib             smtpd
+_codecs_hk          aifc                imghdr              smtplib
+_codecs_iso2022     antigravity         imp                 sndhdr
+_codecs_jp          argparse            importlib           socket
+_codecs_kr          array               inspect             socketserver
+_codecs_tw          ast                 io                  sqlite3
+_collections        asynchat            ipaddress           sre_compile
+_collections_abc    asyncio             itertools           sre_constants
+_compat_pickle      asyncore            json                sre_parse
+_compression        atexit              keyword             ssl
+_contextvars        audioop             lib2to3             stat
+_csv                base64              linecache           statistics
+_ctypes             bdb                 locale              string
+_ctypes_test        binascii            logging             stringprep
+_datetime           binhex              lzma                struct
+_decimal            bisect              mailbox             subprocess
+_distutils_hack     builtins            mailcap             sunau
+_elementtree        bz2                 marshal             symtable
+_functools          cProfile            math                sys
+_hashlib            calendar            mimetypes           sysconfig
+_heapq              cgi                 mmap                tabnanny
+_imp                cgitb               modulefinder        tarfile
+_io                 chunk               msilib              telnetlib
+_json               cmath               msvcrt              tempfile
+_locale             cmd                 multiprocessing     test
+_lsprof             code                my_modules          textwrap
+_lzma               codecs              netrc               this
+_markupbase         codeop              nntplib             threading
+_md5                collections         nt                  time
+_msi                colorsys            ntpath              timeit
+_multibytecodec     compileall          nturl2path          tkinter
+_multiprocessing    concurrent          numbers             token
+_opcode             configparser        opcode              tokenize
+_operator           contextlib          operator            trace
+_osx_support        contextvars         optparse            traceback
+_overlapped         copy                os                  tracemalloc
+_pickle             copyreg             pathlib             tty
+_py_abc             crypt               pdb                 turtle
+_pydecimal          csv                 pickle              turtledemo
+_pyio               ctypes              pickletools         types
+_queue              curses              pip                 typing
+_random             dataclasses         pipes               unicodedata
+_sha1               datetime            pkg_resources       unittest
+_sha256             dbm                 pkgutil             urllib
+_sha3               decimal             platform            uu
+_sha512             difflib             plistlib            uuid
+_signal             dis                 poplib              venv
+_sitebuiltins       distutils           posixpath           warnings
+_socket             doctest             pprint              wave
+_sqlite3            email               profile             weakref
+_sre                encodings           pstats              webbrowser
+_ssl                ensurepip           pty                 winreg
+_stat               enum                py_compile          winsound
+_statistics         errno               pyclbr              wsgiref
+_string             faulthandler        pydoc               xdrlib
+_strptime           filecmp             pydoc_data          xml
+_struct             fileinput           pyexpat             xmlrpc
+_symtable           fnmatch             python              xxsubtype
+_testbuffer         fractions           queue               zipapp
+_testcapi           ftplib              quopri              zipfile
+_testconsole        functools           random              zipimport
+_testimportmultiple gc                  re                  zlib
+_testinternalcapi   genericpath         reprlib             zoneinfo
+_testmultiphase     getopt              rlcompleter         
+_thread             getpass             runpy               
+
+Enter any module name to get more help.  Or, type "modules spam" to search
+for modules whose name or summary contain the string "spam".
+

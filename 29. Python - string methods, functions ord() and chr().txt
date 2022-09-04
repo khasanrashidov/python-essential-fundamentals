@@ -1,0 +1,32 @@
+>>> s = ' Python is the best '
+>>> s.strip()
+'Python is the best' ## method doesn't change actual string
+>>> s ## method returns new string, actual string remains unchanged
+' Python is the best '
+>>> s.strip().upper()
+'PYTHON IS THE BEST'
+>>> 'aaaaa'.isalpha()
+True
+>>> ord('k')
+107
+>>> ord('a')
+97
+>>> chr(107)
+'k'
+>>> chr(97)
+'a'
+>>> chr(1)
+'\x01'
+>>> chr(50)
+'2'
+>>> 'A' > 'a'
+False
+>>> ord('A')
+65
+>>> ord('a')
+97
+>>> 65 > 97
+False
+>>> ## In Python there is no such thing like single symbol or char
+>>> ## any sort of single symbol or char is string 
+>>> ## the length of which is one.

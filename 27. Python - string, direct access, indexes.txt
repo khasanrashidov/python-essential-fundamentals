@@ -1,0 +1,43 @@
+>>> word = 'Python'
+>>> word[0]
+'P'
+>>> word[1]
+'y'
+>>> word[-1]
+'n'
+>>> word[6]
+Traceback (most recent call last):
+  File "<pyshell#6>", line 1, in <module>
+    word[6]
+IndexError: string index out of range
+>>> word = 'Python'
+>>> word[1:5] ## string [a:b] => including a and excluding b
+'ytho'
+>>> ## string[a:b] => including a and not including b
+>>> word[1:] ## starting from 2nd element till the end
+'ython'
+>>> word[:-1] ## starting from the beginning till penultimate element
+'Pytho'
+>>> word[:] ## this slice is the copy of word (string)
+'Python'
+>>> word[:100] ## no error, as if we sliced till the end of the string
+'Python'
+>>> ## the range doesn't matter in string[a:b] and string[a:b:c]
+>>> ## doesn't matter here, meaning it doesn't end up in error
+>>> word[-100:100]
+'Python'
+>>> word = 'Python'
+>>> word[0:5:2] ## [start, stop, step]
+'Pto'
+>>> word[::-1] ## reversed string
+'nohtyP'
+>>> word = word * 2
+>>> word
+'PythonPython'
+>>> word[0] = ''
+Traceback (most recent call last):
+  File "<pyshell#19>", line 1, in <module>
+    word[0] = ''
+TypeError: 'str' object does not support item assignment
+>>> ## string itself can be modified, but its elements cannot be modified
+>>>

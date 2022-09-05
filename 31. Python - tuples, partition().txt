@@ -1,0 +1,35 @@
+>>> email = 'khasan_rashidov@mail.ru'
+>>> email.partition('@')
+('khasan_rashidov', '@', 'mail.ru')
+>>> email.partition('a')
+('kh', 'a', 'san_rashidov@mail.ru')
+>>> ## so if there are many identical chars 
+>>> ## the function just will take the first leftmost char
+>>> (name, at, domain) = email.partition('@')
+>>> domain
+'mail.ru'
+>>> name
+'khasan_rashidov'
+>>> at
+'@'
+>>> ## we can use indices to assign specific part after partition
+>>> domain = email.partition('@')[2]
+>>> domain
+'mail.ru'
+>>> a = 5
+>>> b = 7
+>>> c = 3
+>>> a, b, c = c, b, a ## this assignment is possible because of tuple
+>>> print(a)
+3
+>>> print(b)
+7
+>>> print(c)
+5
+>>> c
+5
+>>> a
+3
+>>> b
+7
+>>> 

@@ -1,0 +1,30 @@
+>>> ## 'list' cannot be an element of the 'set'
+>>> ## duplicates in the 'set' will be removed only unique items remain
+>>> set('aaaa')
+{'a'}
+>>> s1 = {1, 2}
+>>> s2 = {1, 3}
+>>> s1|s2
+{1, 2, 3}
+>>> s1&s2
+{1}
+>>> s1
+{1, 2}
+>>> s2
+{1, 3}
+>>> s1.union(s2)
+{1, 2, 3}
+>>> s1|=s2
+>>> s1
+{1, 2, 3}
+>>> s1-s2
+{2}
+>>> s1^s2
+{2}
+>>> s2<=s1
+True
+>>> s2>=s1
+False
+>>> s2<s1
+True
+>>> 

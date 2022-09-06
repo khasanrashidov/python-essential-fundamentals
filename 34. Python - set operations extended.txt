@@ -1,0 +1,157 @@
+>>> ## list cannot be an element of the set
+>>> first_set = set(("Harry", 32, (1, 2, 3)))
+>>> first_set
+{32, 'Harry', (1, 2, 3)}
+>>> set('Set')
+{'S', 't', 'e'}
+>>> set('Set')
+{'S', 't', 'e'}
+>>> set('Set')
+{'S', 't', 'e'}
+>>> second_set = set("Harry")
+>>> ## there are no duplicates in the set
+>>> second_set
+{'a', 'y', 'r', 'H'}
+>>> third_set = {"Apples", ("Bananas", "Oranges")}
+>>> type(third_set)
+<class 'set'>
+>>> third_set
+{('Bananas', 'Oranges'), 'Apples'}
+>>> ## list cannot be an element of the set
+>>> incorrect_set = {"Apples", ["Bananas", "Oranges"]}
+Traceback (most recent call last):
+  File "<pyshell#85>", line 1, in <module>
+    incorrect_set = {"Apples", ["Bananas", "Oranges"]}
+TypeError: unhashable type: 'list'
+>>> add_set = set((1, 2, 3, 4))
+>>> add_set
+{1, 2, 3, 4}
+>>> add_set.update((1,))
+>>> add_set
+{1, 2, 3, 4}
+>>> add_set.update(("cello", "violin"))
+>>> add_set
+{1, 2, 3, 4, 'violin', 'cello'}
+>>> add_set.update(("cello",))
+>>> ## when there is one object in the set there should be a comma after it
+>>> ## otherwise it will split (break up) the object, if it is string
+>>> add_set
+{1, 2, 3, 4, 'violin', 'cello'}
+>>> sub_set = add_set
+>>> sub_set.remove("violin")
+>>> sub_set
+{1, 2, 3, 4, 'cello'}
+>>> sub_set.remove("guitar")
+Traceback (most recent call last):
+  File "<pyshell#105>", line 1, in <module>
+    sub_set.remove("guitar")
+KeyError: 'guitar'
+>>> sub_set.discard("guitar")
+>>> sub_set
+{1, 2, 3, 4, 'cello'}
+>>> sub_set.discard(4)
+>>> sub_set
+{1, 2, 3, 'cello'}
+>>> sub_set.pop()
+1
+>>> sub_set
+{2, 3, 'cello'}
+>>> sub_set.clear()
+>>> sub_set
+set()
+>>> ## adding elements to a set using the update() function
+>>> ##
+>>> ## The remove(x) function removes the element x from a set.
+>>> ## It returns a KeyError if x is not part of the set.
+>>> ##
+>>> ## There are a couple of other ways to remove an element(s) from a set:
+>>> ## the discard(x) method removes x from the set,
+>>> ## but doesn't raise any error if x is not present in the set
+>>> ##
+>>> ## the pop() method removes and returns a random element from the set.
+>>> ##
+>>> ## the clear() method removes all elements from a set
+>>> ## 1. Set Union
+>>> ## The union of two sets is the set of all the elements of both the sets without duplicates.
+>>> ## We can use the union() method or the | syntax to find the union of a Python set.
+>>> first_set = {1, 2, 3}
+>>> second_set = {3, 4, 5}
+>>> first_set.union(second_set)
+{1, 2, 3, 4, 5}
+>>> first_set | second_set ## using the '|' operator
+{1, 2, 3, 4, 5}
+>>> ## 2. Set Intersection
+>>> ## The intersection of two sets is the set of all the common elements of both the sets.
+>>> ## We can use the intersection() method of the & operator to find the intersection of a Python set.
+>>> first_set = {1, 2, 3, 4, 5, 6}
+>>> second_set = {4, 5, 6, 7, 8, 9}
+>>> first_set.intersection(second_set)
+{4, 5, 6}
+>>> first_set & second_set ## using the `&` operator
+{4, 5, 6}
+>>> ## 3. Set Difference
+>>> ## The difference between two sets is the set of all the elements in first set that are not present in the second set.
+>> ## We can use the difference() method or the - operator to achieve this in Python.
+>>> first_set = {1, 2, 3, 4, 5, 6}
+>>> second_set = {4, 5, 6, 7, 8, 9}
+>>> first_set.difference(second_set)
+{1, 2, 3}
+>>> first_set - second_set  ## using the `-` operator
+{1, 2, 3}
+>>> second_set - first_set
+{8, 9, 7}
+>>> ## 4. Set Symmetric Difference
+>>> ## The symmetric difference between two sets is the set of all the elements
+>>> ## that are either in the first set or the second set but not in both.
+>>> ## We have the choice of using either the symmetric_difference() method or the ^ operator to do this in Python.
+>>> first_set = {1, 2, 3, 4, 5, 6}
+>>> second_set = {4, 5, 6, 7, 8, 9}
+>>> first_set.symmetric_difference(second_set)
+{1, 2, 3, 7, 8, 9}
+>>> first_set ^ second_set  ## using the `^` operator
+{1, 2, 3, 7, 8, 9}
+>>> ## How to Modify a Set by Operations
+>>> ## Each of the set() operations above can be used to modify an existing Python set.
+>>> ## Similar to how we would use an augmented assignment syntax such as += or *= to update a variable, we can do the same for sets
+>>> a = {1, 2, 3, 4, 5, 6}
+>>> b = {4, 5, 6, 7, 8, 9}
+>>> a.update(b)          ## a "union" operation
+>>> a
+{1, 2, 3, 4, 5, 6, 7, 8, 9}
+>>> a &= b               ## the "intersection" operation
+>>> a
+{4, 5, 6, 7, 8, 9}
+>>> a -= set((7, 8, 9))  ## the "difference" operation
+>>> a
+{4, 5, 6}
+>>> a ^= b               ## the "symmetric difference" operation
+>>> a
+{8, 7, 9}
+>>> ## Other set operations
+>>> ## the a.issubset(b) method or <= operator returns true if the a is a subset of b
+>>> ## the a.issuperset(b) method or >= operator returns true if the a is a superset of b
+>>> ## the a.isdisjoint(b) method return true if there are no common elements between sets a and b
+>>> ## Frozen Sets in Python
+>>> ## Because sets are mutable, they are unhashable – which means we cannot use them as dictionary keys.
+>>> ## Python allows us to work around this by using a frozenset instead.
+>>> ## This has all the properties of a set, except that it is immutable
+>>> ## (this means that you cannot add/remove elements from the frozenset).
+>>> ## It is also hashable, so it can be used as keys to a dictionary.
+>>> ## The frozenset datatype has all the methods of a set
+>>> ## (such as difference(), symmetric_difference, and union)
+>>> ## but because it is immutable, it doesn't have methods to add/remove elements.
+>>> a = frozenset((1, 2, 3, 4))
+>>> b = frozenset((3, 4, 5, 6))
+>>> a.issubset(b)
+False
+>>> a.update(b)    ## raises an error
+Traceback (most recent call last):
+  File "<pyshell#297>", line 1, in <module>
+    a.update(b)    ## raises an error
+AttributeError: 'frozenset' object has no attribute 'update'
+>>> ## And using frozensets as dictionary keys is as simple as 1, 2, 3:
+>>> a = frozenset((1, 2, 3, 4))
+>>> b = frozenset(("w", "x", "y", "z"))
+>>> d = {a: "hello", b: "world"}
+>>> d
+{frozenset({1, 2, 3, 4}): 'hello', frozenset({'x', 'z', 'y', 'w'}): 'world'}

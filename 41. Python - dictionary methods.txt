@@ -1,0 +1,77 @@
+>>> d = {'one' : 1, 'two' : 2, 'three' : 3}
+>>> d['two'] ## it is the only way to get the value through they key directly
+2
+>>> ## dict_name['key_name']
+>>> ## There are no numerical positions in the dictionary.
+>>> ## If we want to get the value of the key which doesn't exist,
+>>> ## it will give an error. To work out this situation, we can use
+>>> ## get() method: dict_name.get('key', 'default_return_value').
+>>> ## If we don't value the second parameter in get() method,
+>>> ## and in case where there is no such key, it will return None.
+>>> d['ten'] 
+Traceback (most recent call last):
+  File "<pyshell#2>", line 1, in <module>
+    d['ten']
+KeyError: 'ten'
+>>> d.get('ten', 'no such key')
+'no such key'
+>>> d.get('two')
+2
+>>> d.items()
+dict_items([('one', 1), ('two', 2), ('three', 3)])
+>>> d
+{'one': 1, 'two': 2, 'three': 3}
+>>> d.keys()
+dict_keys(['one', 'two', 'three'])
+>>> d.values()
+dict_values([1, 2, 3])
+>>> d.copy()
+{'one': 1, 'two': 2, 'three': 3}
+>>> v = d.copy()
+>>> v
+{'one': 1, 'two': 2, 'three': 3}
+>>> v = d
+>>> v
+{'one': 1, 'two': 2, 'three': 3}
+>>> d['ten'] = 10 ## we can reassign the value of existing key, it will not raise an error
+>>> d
+{'one': 1, 'two': 2, 'three': 3, 'ten': 10}
+>>> d.items()
+dict_items([('one', 1), ('two', 2), ('three', 3), ('ten', 10)])
+>>> del d['ten'] ## if there is no such key, it raises an error
+>>> d.keys()
+dict_keys(['one', 'two', 'three'])
+>>> 'two' in d.keys()
+True
+>>> d.values()
+dict_values([1, 2, 3])
+>>> d = {'one' : 1, 'two' : 2, 'three' : 3}
+>>> v = d
+>>> v
+{'one': 1, 'two': 2, 'three': 3}
+>>> v['ten'] = 10
+>>> v
+{'one': 1, 'two': 2, 'three': 3, 'ten': 10}
+>>> d
+{'one': 1, 'two': 2, 'three': 3, 'ten': 10}
+>>> v = d[:]
+Traceback (most recent call last):
+  File "<pyshell#6>", line 1, in <module>
+    v = d[:]
+TypeError: unhashable type: 'slice'
+>>> ## shallow copy using slices is not possible
+>>> ## for dictionaries since they are not ordered,
+>>> ## shallow copy can be implemented using
+>>> ## copy() method only.
+>>> v = d.copy()
+>>> del v['ten']
+>>> v
+{'one': 1, 'two': 2, 'three': 3}
+>>> d
+{'one': 1, 'two': 2, 'three': 3, 'ten': 10}
+>>> 2 in v.values()
+True
+>>> 'ten' in v.keys()
+False
+>>> ## we cannot get the key by its value
+>>> ## there's no such method
